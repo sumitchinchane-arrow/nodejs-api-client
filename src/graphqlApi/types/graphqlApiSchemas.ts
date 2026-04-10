@@ -63,6 +63,7 @@ import {
   GraphqlApiContributorRoleType,
   GraphqlApiStaffType,
 } from './entities/contributor';
+import { SoftwareProductType } from './entities/softwareProduct';
 
 export type PartnertagSchema = Schema<PartnertagType, boolean>;
 
@@ -312,6 +313,7 @@ export type ProgramAgreementSchema = Schema<
   GraphqlApiProgramAgreementType,
   boolean
 >;
+export type SoftwareProductSchema = Schema<SoftwareProductType, boolean>;
 
 export type ExportResultSchema = {
   [SelectableField.DATA]?: SelectAllResponseDataSchema;
@@ -350,6 +352,7 @@ export type SelectAllResponseDataSchema = {
   [SelectDataField.WORKGROUP]?: WorkgroupSchema;
   [SelectDataField.SUPPORT_LEVEL]?: SupportLevelSchema;
   [SelectDataField.PROGRAM_AGREEMENT]?: ProgramAgreementSchema;
+  [SelectDataField.SOFTWARE_PRODUCT]?: SoftwareProductSchema;
 };
 
 export type SelectOneResultSchema = {
